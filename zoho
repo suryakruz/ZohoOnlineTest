@@ -1,0 +1,39 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner( System.in );
+
+        int input = sc.nextInt();
+
+        int count = 1;
+        int condition = input;
+
+        for( int i =0 ;i <input ; i++)
+        {
+            boolean flag = false;
+            int j = 0;
+            while ( j < (input * 2) -1)
+            {
+                System.out.print( " " );
+                while ( j >= condition - 1 && j < ( condition * 2 ) - 1 )
+                {
+
+                    System.out.print( count );
+                    count++;
+                    j++;
+                    flag = true;
+                }
+                if( flag)
+                {
+                    condition--;
+                }
+                j++;
+            }
+        }
+    }
+}
